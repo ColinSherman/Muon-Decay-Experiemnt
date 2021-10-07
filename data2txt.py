@@ -23,6 +23,6 @@ for filename in glob('*.data'):
     data_x.extend(x)
     data_y.extend(y)
 new = list(zip(data_x,data_y))
-decays = [x for x in new if not x[0] >= 4000]
+decays = [x for x in new if not x[0] >= 40000]
 
-np.savetxt(params.output,new,fmt='%2i')
+np.savetxt(params.output,decays,fmt='%2i')
